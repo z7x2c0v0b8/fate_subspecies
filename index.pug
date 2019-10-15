@@ -1,0 +1,44 @@
+extends layout
+
+block body_content
+  .index_timeline
+    p ddddd
+  .black_bg
+  .logo.logo_left
+  .logo.logo_right
+  .logo.logo_back
+  .logo.logo_font
+  .transition_bg
+  .white_bg
+  .logo.circle
+
+
+block body_script
+  script.
+    opening()
+
+    function opening() {
+      TweenLite.from(".logo.circle", .8, {y:"-100px", opacity: 0, ease: Power4.easeOut});
+      TweenLite.to(".white_bg, .logo.circle", .1, {y:"100px", opacity: 0, delay: .8, ease: Power4.easeOut});
+      TweenLite.to(".logo.logo_left", .5, {x:"-32px", y:"20px", delay: .8, ease: Power4.easeOut});
+      TweenLite.to(".logo.logo_right", .3, {x:"32px", y:"-20px", delay: .8, ease: Power4.easeOut});
+      TweenLite.to(".logo.logo_back", 1, {opacity: 1, delay: 1, ease: Power4.easeOut});
+      TweenLite.to(".logo.logo_right, .logo.logo_left", 3, {opacity: 0, delay: 2, ease: Power4.easeOut});
+      TweenLite.from(".logo.logo_font", 1, {y:"100", opacity: 0, delay: 2, ease: Power4.easeOut});
+      TweenLite.to(".black_bg", 1, {opacity: 0, delay: 2, ease: Power4.easeOut,  onComplete: () => {
+        $('.white_bg').remove()
+        $('.black_bg').remove()
+      }});
+    }
+    
+
+    function jump(){
+      $(window).attr('location','./character.html');
+    };
+
+
+    $(".index_timeline").click(function(){
+      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+      setTimeout('jump()', 1000)
+
+    });

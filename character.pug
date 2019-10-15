@@ -1,0 +1,30 @@
+extends layout
+
+block body_content
+  .index_timeline
+    p 蕭星
+  .transition_bg
+  .transition_bg_open
+
+
+block body_script
+  script.
+    opening()
+
+    function opening() {
+      TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {
+          $('.transition_bg_open').remove()
+      }});
+    }
+
+    function jump(){
+      $(window).attr('location','./saber.html');
+    };
+
+
+    $(".index_timeline").click(function(){
+      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+      setTimeout('jump()', 1000)
+
+    });
+

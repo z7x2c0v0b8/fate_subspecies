@@ -1,0 +1,171 @@
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Noto Sans TC', 'Noto Serif TC', serif;
+  background-image: url("https://i.imgur.com/hQ4mcbs.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+
+.black_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000; }
+
+.white_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff; }
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto; }
+
+.circle {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  background: #000; }
+
+.logo_left {
+  width: 140px;
+  height: 240px;
+  background-image: url("https://i.imgur.com/pn2MwFI.png");
+  -webkit-transform: translate(-28px, 23px);
+  -ms-transform: translate(-28px, 23px);
+  transform: translate(-28px, 23px); }
+
+.logo_right {
+  width: 140px;
+  height: 240px;
+  background-image: url("https://i.imgur.com/IUeq0Wj.png");
+  -webkit-transform: translate(28px, -23px);
+  -ms-transform: translate(28px, -23px);
+  transform: translate(28px, -23px); }
+
+.logo_back {
+  width: 204px;
+  height: 283px;
+  background-image: url("https://i.imgur.com/fvPEHsy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0; }
+
+.logo_font {
+  width: 204px;
+  height: 283px;
+  background-image: url("https://i.imgur.com/KkRkTTL.png");
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.index_timeline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 100px;
+  background-color: #fff; }
+
+.transition_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  -webkit-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  transform: translateX(-100vw); }
+
+.transition_bg_open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  -webkit-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  transform: translateX(100vw); }
+
+.section {
+  position: relative;
+  margin: 120px 70px 0;
+  color: #fff; }
+  .section .tatto {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    width: 427px;
+    height: 800px;
+    background-image: url("../Images/tatto_saber.png");
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-size: contain;
+    opacity: .15;
+    -webkit-filter: blur(2px);
+    filter: blur(2px); }
+  .section .title_outline {
+    position: relative;
+    width: 100%; }
+  .section .title {
+    display: inline-block;
+    font-size: 80px;
+    font-weight: 700;
+    font-family: serif;
+    line-height: 1; }
+  .section .subtitle {
+    font-size: 20px; }
+  .section .intro_outline {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden; }
+    .section .intro_outline .intro {
+      margin-bottom: 50px;
+      width: calc(100% + 18px);
+      height: 165px;
+      word-wrap: break-word;
+      overflow: scroll;
+      overflow-x: hidden;
+      color: #fff;
+      line-height: 2; }
+  .section .chart_outline {
+    display: inline-block;
+    width: 300px; }
+  .section .value {
+    display: inline-block;
+    vertical-align: top;
+    width: 34%; }
+  .section .photo {
+    position: relative; }
+    .section .photo .character_main {
+      width: 700px;
+      height: 850px;
+      margin: 0 auto;
+      background-image: url("../Images/saber_half.png");
+      background-size: contain; }
+    .section .photo .slogan {
+      position: absolute;
+      top: 40px;
+      right: 100px;
+      font-size: 30px;
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl; }
