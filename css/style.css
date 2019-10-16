@@ -5,10 +5,14 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Noto Sans TC', 'Noto Serif TC', serif;
-  background-image: url("https://i.imgur.com/hQ4mcbs.jpg");
+  background-image: url("../Images/background.png");
   background-size: cover;
   background-position: center;
   overflow: hidden; }
+
+.modal-content {
+  background-color: transparent;
+  border: 0; }
 
 .black_bg {
   position: absolute;
@@ -131,19 +135,14 @@ body {
     line-height: 1; }
   .section .subtitle {
     font-size: 20px; }
-  .section .intro_outline {
+  .section .intro {
     margin-top: 50px;
+    margin-bottom: 50px;
     width: 100%;
-    overflow: hidden; }
-    .section .intro_outline .intro {
-      margin-bottom: 50px;
-      width: calc(100% + 18px);
-      height: 165px;
-      word-wrap: break-word;
-      overflow: scroll;
-      overflow-x: hidden;
-      color: #fff;
-      line-height: 2; }
+    height: 165px;
+    word-wrap: break-word;
+    color: #fff;
+    line-height: 2; }
   .section .chart_outline {
     display: inline-block;
     width: 300px; }
@@ -151,21 +150,23 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 34%; }
-  .section .photo {
-    position: relative; }
-    .section .photo .character_main {
-      width: 700px;
-      height: 850px;
-      margin: 0 auto;
-      background-image: url("../Images/saber_half.png");
-      background-size: contain; }
-    .section .photo .slogan {
+  .section .character_main {
+    position: relative;
+    width: 700px;
+    height: 850px;
+    margin: 0 auto;
+    background-image: url("../Images/saber_half.png");
+    background-size: contain; }
+    .section .character_main .slogan {
+      color: #fff;
       position: absolute;
-      top: 40px;
-      right: 100px;
+      top: 10px;
+      right: 160px;
       font-size: 30px;
       font-family: 'Noto Serif TC';
       font-weight: 700;
       -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl; }
+      .section .character_main .slogan:hover {
+        color: #fff; }

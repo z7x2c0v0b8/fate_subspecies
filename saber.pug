@@ -9,12 +9,11 @@ block body_content
           .title_outline.mt-4
             .title Saber
             span.ml-3.subtitle 蕭星 / 土方歲三
-          .intro_outline
-            .intro
-              p
-                | 白髮黃瞳的Servant。總是很沈著，也有意外地開朗的時候，一但交鋒則化身為冷靜而殘酷的劊子手。
-                br
-                | 生前，對於未能保住新選組局長近藤感到虧欠和懊悔，故以英靈姿態被召喚後，唯一的心念是為現在的御主贏得最後的聖杯戰爭。向聖杯寄託的願望是「戰鬥到最後」。
+          .intro
+            p
+              | 白髮黃瞳的Servant。總是很沈著，也有意外地開朗的時候，一但交鋒則化身為冷靜而殘酷的劊子手。
+              br
+              | 生前，對於未能保住新選組局長近藤感到虧欠和懊悔，故以英靈姿態被召喚後，唯一的心念是為現在的御主贏得最後的聖杯戰爭。向聖杯寄託的願望是「戰鬥到最後」。
           .chart_outline.m
             canvas#myChart(width="300" height="280")
           .value.ml-4.mt-3
@@ -34,12 +33,12 @@ block body_content
             h4 任生之刃
         .col-md-1
         .col-md-6
-          .photo
-            .character_main
-            .slogan 
-              | 這一次一定會守護住，
-              br
-              | 不會再重蹈覆轍了。
+            a(href="../Images/saber_1.png", data-toggle="lightbox", data-max-height="800")
+              .character_main
+                .slogan 
+                  | 這一次一定會守護住，
+                  br
+                  | 不會再重蹈覆轍了。
   .transition_bg_open
 
 
@@ -47,12 +46,14 @@ block body_content
 
 block body_script
   script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js")
   script.
     opening()
 
-
     function opening() {
-      TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {
+      TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
+      TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});
+      TweenLite.from(".intro", 1, {opacity: 0, x:"-50",ease: Power4.easeOut, delay: .8 ,onComplete: () => {
           $('.transition_bg_open').remove()
       }});
     }
@@ -67,6 +68,11 @@ block body_script
       setTimeout('jump()', 1000)
 
     });
+
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
 
     Chart.defaults.global.animation.duration = 1000;
     Chart.defaults.global.legend.labels.boxWidth = 15;
