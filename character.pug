@@ -1,10 +1,21 @@
 extends layout
 
 block body_content
-  .index_timeline
-    p 蕭星
-  .transition_bg
+  .section#character_list
+    .container-fluid
+      .row
+        .col-md-5
+          .title_outline.mt-4
+            .title Character
+      .row(style="margin-top: 50px")
+        .col-4
+          .card_half.saber
+            .name
+             p Saber
+             h4 蕭星
+          .card_half
   .transition_bg_open
+  .transition_bg
 
 
 block body_script
@@ -22,7 +33,7 @@ block body_script
     };
 
 
-    $(".index_timeline").click(function(){
+    $(".card_half").click(function(){
       TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
       setTimeout('jump()', 1000)
 

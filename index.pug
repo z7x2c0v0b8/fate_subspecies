@@ -1,8 +1,8 @@
 extends layout
 
 block body_content
-  .index_timeline
-    p ddddd
+  video(autoplay="", loop="", muted="")
+    source(src="../Images/index_video.mp4", type="video/mp4")
   .black_bg
   .logo.logo_left
   .logo.logo_right
@@ -31,14 +31,3 @@ block body_script
       }});
     }
     
-
-    function jump(){
-      $(window).attr('location','./character.html');
-    };
-
-
-    $(".index_timeline").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jump()', 1000)
-
-    });

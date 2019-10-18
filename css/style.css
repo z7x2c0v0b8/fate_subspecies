@@ -10,6 +10,49 @@ body {
   background-position: center;
   overflow: hidden; }
 
+a {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none; }
+
+nav.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 40px;
+  color: #fff;
+  z-index: 9; }
+  nav.navbar .nav-item {
+    padding: 0 20px;
+    cursor: pointer; }
+  nav.navbar a {
+    color: #fff; }
+    nav.navbar a:hover {
+      color: #fff;
+      opacity: .8; }
+
+.sticker {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  text-align: right;
+  color: white; }
+  .sticker p {
+    margin: 0; }
+
+.plurk {
+  top: auto;
+  bottom: 35px;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  cursor: pointer; }
+  .plurk:hover {
+    color: #fff;
+    text-decoration: none; }
+
 .modal-content {
   background-color: transparent;
   border: 0; }
@@ -20,7 +63,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #000; }
+  background: #000;
+  z-index: 99; }
 
 .white_bg {
   position: absolute;
@@ -28,7 +72,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #fff; }
+  background: #fff;
+  z-index: 99; }
 
 .logo {
   position: absolute;
@@ -36,13 +81,15 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  margin: auto; }
+  margin: auto;
+  z-index: 99; }
 
 .circle {
   border-radius: 100px;
   width: 200px;
   height: 200px;
-  background: #000; }
+  background: #000;
+  z-index: 99; }
 
 .logo_left {
   width: 140px;
@@ -50,7 +97,8 @@ body {
   background-image: url("https://i.imgur.com/pn2MwFI.png");
   -webkit-transform: translate(-28px, 23px);
   -ms-transform: translate(-28px, 23px);
-  transform: translate(-28px, 23px); }
+  transform: translate(-28px, 23px);
+  z-index: 99; }
 
 .logo_right {
   width: 140px;
@@ -58,7 +106,8 @@ body {
   background-image: url("https://i.imgur.com/IUeq0Wj.png");
   -webkit-transform: translate(28px, -23px);
   -ms-transform: translate(28px, -23px);
-  transform: translate(28px, -23px); }
+  transform: translate(28px, -23px);
+  z-index: 99; }
 
 .logo_back {
   width: 204px;
@@ -66,14 +115,30 @@ body {
   background-image: url("https://i.imgur.com/fvPEHsy.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 99; }
 
 .logo_font {
   width: 204px;
   height: 283px;
   background-image: url("https://i.imgur.com/KkRkTTL.png");
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: 99; }
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-filter: grayscale(1) brightness(3) contrast(2.5) opacity(0.3);
+  filter: grayscale(1) brightness(3) contrast(2.5) opacity(0.3); }
 
 .index_timeline {
   position: absolute;
@@ -92,7 +157,8 @@ body {
   background: #000;
   -webkit-transform: translateX(-100vw);
   -ms-transform: translateX(-100vw);
-  transform: translateX(-100vw); }
+  transform: translateX(-100vw);
+  z-index: 999; }
 
 .transition_bg_open {
   position: absolute;
@@ -104,15 +170,16 @@ body {
   background: #000;
   -webkit-transform: translateX(100vw);
   -ms-transform: translateX(100vw);
-  transform: translateX(100vw); }
+  transform: translateX(100vw);
+  z-index: 999; }
 
 .section {
   position: relative;
-  margin: 120px 70px 0;
+  padding: 120px 70px 0;
   color: #fff; }
   .section .tatto {
     position: absolute;
-    top: -45px;
+    top: 45px;
     left: 50%;
     width: 427px;
     height: 800px;
@@ -170,3 +237,62 @@ body {
       writing-mode: vertical-rl; }
       .section .character_main .slogan:hover {
         color: #fff; }
+
+.section#character_list .card_half {
+  position: relative;
+  display: inline-block;
+  width: 49.1%;
+  height: 400px;
+  background-color: #343052;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s; }
+  .section#character_list .card_half::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), color-stop(29%, rgba(255, 255, 255, 0.5)), color-stop(60%, rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 29%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 29%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 29%, rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 0) 100%); }
+  .section#character_list .card_half:hover {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px); }
+    .section#character_list .card_half:hover .name {
+      color: #fff; }
+  .section#character_list .card_half:hover::before {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), color-stop(29%, rgba(0, 0, 0, 0.5)), color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 29%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 29%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 29%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%); }
+  .section#character_list .card_half p, .section#character_list .card_half h4 {
+    margin: 0;
+    font-weight: 700; }
+  .section#character_list .card_half .name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    width: auto; }
+
+.section#character_list .saber {
+  background-image: url("../Images/list_saber.png");
+  background-size: cover;
+  background-position: top center;
+  color: #343052;
+  font-family: 'Noto Serif TC';
+  font-weight: 700; }
+
+.section#character_list .card_half.saber:hover {
+  background-color: #282542;
+  background-image: url("../Images/list_saber_hover.png");
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px); }

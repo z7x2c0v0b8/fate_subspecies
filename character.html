@@ -18,16 +18,68 @@
     <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body>
-    <div class="index_timeline">
-      <p>蕭星</p>
+    <div class="section" id="character_list">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="title_outline mt-4">
+              <div class="title">Character</div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 50px">
+          <div class="col-4">
+            <div class="card_half saber">
+              <div class="name">
+                <p>Saber</p>
+                <h4>蕭星</h4>
+              </div>
+            </div>
+            <div class="card_half"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="transition_bg"></div>
     <div class="transition_bg_open"></div>
+    <div class="transition_bg"></div>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid"><a class="navbar-brand" href="./"><img class="mr-4" style="width: 180px" src="../Images/nav_logo.png"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_item" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="fas fa-bars"></span></button>
+        <div class="collapse navbar-collapse" id="nav_item">
+          <ul class="navbar-nav">
+            <li class="nav-item text-white"><a class="nav-link nav_about" href="#">About</a></li>
+            <li class="nav-item text-white">
+              <div class="nav-link nav_character">Character</div>
+            </li>
+            <li class="nav-item text-white"><a class="nav-link nav_story" href="#">Story</a></li>
+            <li class="nav-item text-white"><a class="nav-link nav_info" href="#">Info</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="sticker TRPG">
+      <p>TRPG</p>
+      <p>Fate / Subspecies</p>
+      <p>團務網站</p>
+    </div><a class="sticker plurk" href="https://www.plurk.com/fate_subspecies" target="_blank">
+      <p>plurk.com/fate_subspecies</p></a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
+    <script>
+      function jump(){
+        $(window).attr('location','./character.html');
+      };
+      
+      
+      $(".nav_character").click(function(){
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jump()', 1000);
+      });
+      
+    </script>
     <script>
       opening()
       
@@ -42,7 +94,7 @@
       };
       
       
-      $(".index_timeline").click(function(){
+      $(".card_half").click(function(){
         TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
         setTimeout('jump()', 1000)
       

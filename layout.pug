@@ -40,7 +40,8 @@ html(lang="zh-tw")
   body
     block body_content
 
-    //-include includes/modal_dialogs
+    block body_header
+      include header
 
     block init_script
       script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
@@ -48,5 +49,16 @@ html(lang="zh-tw")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js")
+      script.
+        function jump(){
+          $(window).attr('location','./character.html');
+        };
+
+
+        $(".nav_character").click(function(){
+          TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+          setTimeout('jump()', 1000);
+        });
 
     block body_script
+
