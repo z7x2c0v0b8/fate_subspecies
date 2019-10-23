@@ -14,6 +14,13 @@ block body_content
              p Saber
              h4 蕭星
           .card_half
+
+        .col-4
+          .card_half.archer
+            .name
+             p Saber
+             h4 蕭星
+          .card_half
   .transition_bg_open
   .transition_bg
 
@@ -28,14 +35,25 @@ block body_script
       }});
     }
 
-    function jump(){
+    function jumpSaber(){
       $(window).attr('location','./saber.html');
     };
 
+    function jumpArcher(){
+      $(window).attr('location','./archer.html');
+    };
 
-    $(".card_half").click(function(){
+
+
+    $(".card_half.saber").click(function(){
       TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jump()', 1000)
+      setTimeout('jumpSaber()', 1000)
+
+    });
+
+    $(".card_half.archer").click(function(){
+      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+      setTimeout('jumpArcher()', 1000)
 
     });
 

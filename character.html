@@ -37,6 +37,15 @@
             </div>
             <div class="card_half"></div>
           </div>
+          <div class="col-4">
+            <div class="card_half archer">
+              <div class="name">
+                <p>Saber</p>
+                <h4>蕭星</h4>
+              </div>
+            </div>
+            <div class="card_half"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -89,14 +98,25 @@
         }});
       }
       
-      function jump(){
+      function jumpSaber(){
         $(window).attr('location','./saber.html');
       };
       
+      function jumpArcher(){
+        $(window).attr('location','./archer.html');
+      };
       
-      $(".card_half").click(function(){
+      
+      
+      $(".card_half.saber").click(function(){
         TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-        setTimeout('jump()', 1000)
+        setTimeout('jumpSaber()', 1000)
+      
+      });
+      
+      $(".card_half.archer").click(function(){
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpArcher()', 1000)
       
       });
     </script>

@@ -190,7 +190,8 @@ video {
     background-size: contain;
     opacity: .15;
     -webkit-filter: blur(2px);
-    filter: blur(2px); }
+    filter: blur(2px);
+    z-index: -9; }
   .section .title_outline {
     position: relative;
     width: 100%; }
@@ -296,3 +297,12 @@ video {
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   transform: translateY(-10px); }
+
+.row.cha_archer {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: -1; }
+  .row.cha_archer .character_main {
+    width: 1230px;
+    height: 880px; }
