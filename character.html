@@ -35,16 +35,40 @@
                 <h4>蕭星</h4>
               </div>
             </div>
-            <div class="card_half"></div>
+            <div class="card_half saber_master">
+              <div class="name">
+                <p>Master</p>
+                <h4>才吾郎</h4>
+              </div>
+            </div>
           </div>
           <div class="col-4">
             <div class="card_half archer">
               <div class="name">
-                <p>Saber</p>
-                <h4>蕭星</h4>
+                <p>Archer</p>
+                <h4>安格</h4>
               </div>
             </div>
-            <div class="card_half"></div>
+            <div class="card_half archer_master">
+              <div class="name">
+                <p>Master</p>
+                <h4>瑟西</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card_half caster">
+              <div class="name">
+                <p>Caster</p>
+                <h4>米娜</h4>
+              </div>
+            </div>
+            <div class="card_half caster_master">
+              <div class="name">
+                <p>Master</p>
+                <h4>野帽</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -81,12 +105,22 @@
       function jump(){
         $(window).attr('location','./character.html');
       };
+      function jumpStory(){
+        $(window).attr('location','./story.html');
+      };
+      
       
       
       $(".nav_character").click(function(){
         TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
         setTimeout('jump()', 1000);
       });
+      
+      $(".nav_story").click(function(){
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpStory()', 1000);
+      });
+      
       
     </script>
     <script>

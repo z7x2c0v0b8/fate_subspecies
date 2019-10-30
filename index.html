@@ -59,12 +59,22 @@
       function jump(){
         $(window).attr('location','./character.html');
       };
+      function jumpStory(){
+        $(window).attr('location','./story.html');
+      };
+      
       
       
       $(".nav_character").click(function(){
         TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
         setTimeout('jump()', 1000);
       });
+      
+      $(".nav_story").click(function(){
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpStory()', 1000);
+      });
+      
       
     </script>
     <script>

@@ -9,7 +9,8 @@ body
   background-size: cover
   background-position: center
   overflow: hidden
-a
+
+a:hover, a:visited, a:link, a:active
   color: rgba(255, 255, 255, 1)
   &:hover
   color: rgba(255, 255, 255, .8)
@@ -241,17 +242,22 @@ video
     width: 49.1%
     height: 50vh
     background-color: #343052
+    background-size: cover
+    background-position: top center
     float: left
     text-align: center
+    color: #343052
+    font-family: 'Noto Serif TC'
+    font-weight: 700
     cursor: pointer
     transition: all .2s
     &::before
       content: ''
       position: absolute
-      top: 60%
+      top: 30%
       left: 0
       width: 100%
-      height: 40%
+      height: 70%
       background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, .5) 29%, rgba(255, 255, 255, .3) 60%, rgba(255, 255, 255, 0) 100%)
     &:hover
       transform: translateY(-10px)
@@ -271,17 +277,50 @@ video
       width: auto
   .saber
     background-image: url("../Images/list_saber.png")
-    background-size: cover
-    background-position: top center
-    color: #343052
-    font-family: 'Noto Serif TC'
-    font-weight: 700
-
-  .card_half.saber
     &:hover
       background-color: #282542
       background-image: url("../Images/list_saber_hover.png")
       transform: translateY(-10px)
+  .saber_master
+    background-image: url("../Images/list_master_saber.png")
+    &:hover
+      background-color: #282542
+      background-image: url("../Images/list_master_saber_hover.png")
+      transform: translateY(-10px)
+
+  .archer
+    color: #28385a
+    background-color: #28385a
+    background-image: url("../Images/list_archer.png")
+    &:hover
+      background-color: #1a2846
+      background-image: url("../Images/list_archer_hover.png")
+      transform: translateY(-10px)
+  .archer_master
+    color: #28385a
+    background-color: #28385a
+    &:hover
+      background-color: #1a2846
+      transform: translateY(-10px)
+
+  .caster
+    color: #7d470e
+    background-color: #e4bc73
+    background-image: url("../Images/list_caster.png")
+    &:hover
+      background-color: #d2a85b
+      background-image: url("../Images/list_caster_hover.png")
+      transform: translateY(-10px)
+  .caster_master
+    color: #7d470e
+    background-color: #e4bc73
+    background-image: url("../Images/list_master_caster.png")
+    &:hover
+      background-color: #d2a85b
+      background-image: url("../Images/list_master_caster_hover.png")
+      transform: translateY(-10px) 
+
+
 
 .row.cha_archer
   position: absolute
@@ -291,4 +330,128 @@ video
   .character_main
     width: 1230px
     height: 880px
+
+.section#story
+  .story_mask
+    width: 100%
+    height: 400px
+    overflow: auto
+  .story_outline
+    width: 1155px
+  .caption
+    display: inline-block
+    position: relative
+    width: 100px
+    height: 200px
+    color: #fff
+    .story_title
+      position: absolute
+      top: 0
+      left: 0
+      text-align: center
+      width: 130px
+      cursor: pointer
+      transition: all .2s
+      h4
+        font-size: 18px
+      a,p
+        font-size: 14px
+        opacity: .8
+        transition: all .2s
+      h4,p
+        margin: 0
+      &:hover
+        transform: translateY(-5px)
+        p
+          opacity: 1
+          text-shadow: 0 0 8px #fdffe8a1
+
+    .line
+      position: absolute
+      margin: 10px
+      width: 2px
+      top: 130px
+      background: #fff
+      transform: rotate(25deg) 
+    .height
+      width: 1px
+      top: 100px
+      left: 55px
+      height: 20px
+      transform: rotate(0deg)
+    .long
+      left: 40px
+      height: 60px
+    .info
+      position: absolute
+      top: 145px
+      left: 0
+    .player
+      width: 35px
+      height: 35px
+      border: 2px solid
+      margin-bottom: 15px
+      border-radius: 35px
+      background: #fff
+      background-image: url('https://i.imgur.com/Rw2ArIh.png')
+      background-size: cover
+      cursor: pointer
+      transition: transform .2s
+      &:hover
+        transform: scale(1.5,1.5)
+      
+  .caption.small
+    width: 50px
+    margin-right: 10px
+    .story_title
+      width: 80px
+      height: 42px
+      top: 90px
+    .line.short
+      height: 20px
+      left: 25px
+    .info
+      top: 175px
+      left: 10px
+
+  .caption.next
+    width: 200px
+    vertical-align: top
+    margin: 113px 10px 0 30px
+    h4
+      text-align: center
+    .line_horizon
+      width: 200px
+      //margin-bottom: 35px
+      height: 1px
+      background: #fff
+      animation-name: pulse
+      animation-duration: 2s
+      animation-iteration-count: infinite
+      
+      @keyframes pulse 
+        0% 
+          transform: scale(0)
+          transform-origin: left
+
+        50% 
+          transform: scale(1)
+          transform-origin: left
+        
+        51% 
+          transform: scale(1)
+          transform-origin: right
+        
+        100% 
+          transform: scale(0)
+          transform-origin: right
+        
+      
+
+  .intro
+      margin-top: 40px
+      border-left: solid 1px #fff
+      padding-left: 20px
+      height: auto
+
 
