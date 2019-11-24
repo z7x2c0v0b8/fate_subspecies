@@ -21,30 +21,38 @@
     <div class="section" id="character">
       <div class="tatto"></div>
       <div class="container-fluid">
+        <div class="row cha_archer d-none d-lg-block">
+          <div class="col-md-7">
+            <div class="character_main" style="background-image: url('./Images/archer_half.png')">
+              <div class="slogan">
+                 這一次一定會守護住，<br/>不會再重蹈覆轍了。</div>
+            </div>
+          </div>
+        </div>
+        <div class="row cha_archer_mobile d-block d-lg-none">
+          <div class="col-lg-7"><a class="col-lg-7" href="./Images/archer_1.png" data-toggle="lightbox" data-max-height="800">
+              <div class="character_main archer" style="background-image: url('./Images/archer_half.png')">
+                <div class="slogan">這一次一定會守護住，<br/>不會再重蹈覆轍了。</div>
+              </div></a></div>
+        </div>
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5 order-md-first order-last">
             <div class="title_outline mt-4">
-              <div class="title">Archer</div><span class="ml-3 subtitle">安格 / 莫那·魯道</span>
+              <div class="title">Archer</div>
+              <div class="ml-md-3 subtitle">安格 / 莫那·魯道</div>
             </div>
             <div class="intro">
-              <p>白髮黃瞳的Servant。總是很沈著，也有意外地開朗的時候，一但交鋒則化身為冷靜而殘酷的劊子手。<br/>生前，對於未能保住新選組局長近藤感到虧欠和懊悔，故以英靈姿態被召喚後，唯一的心念是為現在的御主贏得最後的聖杯戰爭。向聖杯寄託的願望是「戰鬥到最後」。</p>
+              <p>臉上帶有紅色刺青的Servant。有著獵人天生的直覺和冷血的行動判斷，但私底下意外地很照顧自己看重的人。<br/>認為自己在生前並未做好一族首領的職責而讓族人慘遭殺害，希望能透過聖杯的力量重返當下並做出正確的決定，改變族人們的命運。<br/>被召喚於現世後對烹飪與家事有著莫名的堅持，戰鬥外的時間似乎更享受於以人類之姿度過的每一天(?)<br/>3C白癡。對於一切需要介面操控的機械總是無法上心。</p>
             </div>
-            <div class="chart_outline m">
+            <div class="chart_outline mt-md-3 mt-5">
               <canvas id="myChart" width="300" height="280"></canvas>
             </div>
-            <div class="value ml-4 mt-3">
+            <div class="value ml-md-4 mt-3">
               <p>
-                 筋力： A<br/>耐久： A+<br/>敏捷： B<br/>魔力： E<br/>幸運： C<br/>寶具： A</p>
-              <h4>任生之刃</h4>
+                 筋力： A<br/>耐久： C<br/>敏捷： A+<br/>魔力： D<br/>幸運： D<br/>寶具： A</p>
+              <h4 class="mb-5"> 邁向自由的彩虹彼端</h4>
             </div>
-          </div><a class="col-md-5" href="./Images/archer_1.png" data-toggle="lightbox" data-max-height="800"></a>
-        </div>
-        <div class="row cha_archer">
-          <div class="col-md-7"><a href="./Images/saber_1.png" data-toggle="lightbox" data-max-height="800">
-              <div class="character_main" style="background-image: url('./Images/archer_half.png')">
-                <div class="slogan">
-                   這一次一定會守護住，<br/>不會再重蹈覆轍了。</div>
-              </div></a></div>
+          </div><a class="col-lg-7" href="./Images/archer_1.png" data-toggle="lightbox" data-max-height="800"></a>
         </div>
       </div>
     </div>
@@ -59,12 +67,11 @@
               <div class="nav-link nav_character">Character</div>
             </li>
             <li class="nav-item text-white"><a class="nav-link nav_story" href="#">Story</a></li>
-            <li class="nav-item text-white"><a class="nav-link nav_info" href="#">Info</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="sticker TRPG">
+    <div class="sticker TRPG d-none d-md-block">
       <p>TRPG</p>
       <p>Fate / Subspecies</p>
       <p>團務網站</p>
@@ -82,6 +89,9 @@
       function jumpStory(){
         $(window).attr('location','./story.html');
       };
+      function jumpAbout(){
+        $(window).attr('location','./about.html');
+      };
       
       
       
@@ -95,6 +105,11 @@
         setTimeout('jumpStory()', 1000);
       });
       
+      $(".nav_about").click(function(){
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpAbout()', 1000);
+      });
+      
       
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -103,23 +118,13 @@
       opening()
       
       function opening() {
+        $('.sticker.plurk').remove()
         TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
         TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});
         TweenLite.from(".intro", 1, {opacity: 0, x:"-50",ease: Power4.easeOut, delay: .8 ,onComplete: () => {
             $('.transition_bg_open').remove()
         }});
       }
-      
-      function jump(){
-        $(window).attr('location','./saber.html');
-      };
-      
-      
-      $(".index_timeline").click(function(){
-        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-        setTimeout('jump()', 1000)
-      
-      });
       
       $(document).on('click', '[data-toggle="lightbox"]', function(event) {
                   event.preventDefault();
@@ -139,9 +144,9 @@
               labels: ['筋力', '耐久', '敏捷', '魔力', '幸運', '寶具'],
               datasets: [{
                   label: ' ',
-                  borderColor: 'rgb(204, 186, 148, 1)',
-                  backgroundColor: 'rgb(204, 186, 148, .6)',
-                  data: [5, 6, 4, 1, 3, 5]
+                  borderColor: 'rgb(154, 193, 234, 1)',
+                  backgroundColor: 'rgb(154, 193, 234, .6)',
+                  data: [5, 3, 6, 2, 2, 5]
               }]
           },
       
@@ -151,7 +156,7 @@
                   pointLabels: {
                     fontFamily: '微軟正黑體',
                     fontSize: 10,
-                    fontColor: "rgba(204, 186, 148)"
+                    fontColor: "rgba(154, 193, 234)"
                   },
                   ticks: {
                     display: false,
@@ -160,7 +165,7 @@
                   },
                   gridLines: {
                     display: true,
-                    color: "rgba(204, 186, 148, .5)"
+                    color: "rgba(154, 193, 234, .5)"
                   }    
               },
               title: {

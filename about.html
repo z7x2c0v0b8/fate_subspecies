@@ -18,44 +18,44 @@
     <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body>
-    <div class="section" id="character">
-      <div class="tatto"></div>
+    <div class="section" id="about">
       <div class="container-fluid">
-        <div class="row cha_saber d-none d-lg-block">
-          <div class="col-lg-7">
-            <div class="character_main" style="background-image: url('./Images/saber_half.png')">
-              <div class="slogan">這一次一定會守護住，<br/>不會再重蹈覆轍了。</div>
+        <div class="row">
+          <div class="col-12">
+            <div class="title_outline mt-4">
+              <div class="title">About</div>
             </div>
           </div>
         </div>
-        <div class="row cha_saber_mobile d-block d-lg-none">
-          <div class="col-lg-7"><a class="col-lg-7" href="./Images/saber_1.png" data-toggle="lightbox" data-max-height="800">
-              <div class="character_main" style="background-image: url('./Images/saber_half.png')">
-                <div class="slogan">這一次一定會守護住，<br/>不會再重蹈覆轍了。</div>
-              </div></a></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 order-lg-first order-last">
-            <div class="title_outline mt-4">
-              <div class="title">Saber</div>
-              <div class="ml-3 subtitle">蕭星 / 土方歲三</div>
-            </div>
+        <div class="row" style="margin-top: 50px">
+          <div class="col-md-4 col-12">
+            <h4 class="about_title">關於本站</h4>
             <div class="intro">
-              <p>白髮黃瞳的Servant。總是很沈著，也有意外地開朗的時候，一但交鋒則化身為冷靜而殘酷的劊子手。<br/>生前，對於未能保住新選組局長近藤感到虧欠和懊悔，故以英靈姿態被召喚後，唯一的心念是為現在的御主贏得最後的聖杯戰爭。向聖杯寄託的願望是「戰鬥到最後」。</p>
-            </div>
-            <div class="chart_outline mt-md-3 mt-5">
-              <canvas id="myChart" width="250" height="230"></canvas>
-            </div>
-            <div class="value ml-md-4 mt-3">
               <p>
-                 筋力： A<br/>耐久： A+<br/>敏捷： B<br/>魔力： E<br/>幸運： C<br/>寶具： A</p>
-              <h4 class="mb-5">任生之刃</h4>
+                 本站為「TRPG【Fate/Subspecies】團務延伸私人企劃」官方網站，收錄團務內的故事劇情與詳細角色設定。並統整團務外(私人企劃)玩家進行的延伸創作，期望讓世界觀及角色故事更加完整！
+                原團務使用系統為【PbtA 本週主打怪】，並參考一部分【Fate系列】世界觀。
+              </p>
             </div>
-          </div><a class="col-lg-7" href="./Images/saber_1.png" data-toggle="lightbox" data-max-height="800"></a>
+          </div>
+          <div class="col-md-4 col-12">
+            <h4 class="about_title">關於 PbtA </h4>
+            <div class="intro">
+              <p>
+                 以啟示錄世界（Apocalypse World）引擎所驅動的角色扮演遊戲，稱作 PbtA （Powered by the Apocalypse）遊戲：除了啟示錄世界以外，還包括怪物心（Monsterhearts）、藍鬍子的新娘、本週主打怪（Monsters of the Week）和 tremulus 在內。<a href="https://trpgtw.blogspot.com/2019/08/pbta.html?m=1" target="_blank" style="opacity: .5">via</a></p>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <h4 class="about_title">關於 TRPG </h4>
+            <div class="intro">
+              <p>
+                 桌上角色扮演遊戲（Tabletop Role Playing Game，縮寫： TRPG）是一種最初的角色扮演遊戲。一般需要3-5人參與，其中一人為遊戲主持者，負責解說劇情，扮演非玩家角色，如村民、怪物等，記錄時間，對玩家的行為作出裁決等。其他的人則是玩家，扮演遊戲中的角色。進行遊戲的過程被稱為「跑團」。<a href="https://zh.wikipedia.org/wiki/%E6%A1%8C%E4%B8%8A%E8%A7%92%E8%89%B2%E6%89%AE%E6%BC%94%E9%81%8A%E6%88%B2" target="_blank" style="opacity: .5">via</a></p>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="transition_bg_open"></div>
+      <div class="transition_bg"></div>
     </div>
-    <div class="transition_bg_open"></div>
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid"><a class="navbar-brand" href="./"><img class="mr-4" style="width: 180px" src="./Images/header_logo.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_item" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="fas fa-bars"></span></button>
@@ -111,72 +111,14 @@
       
       
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script>
       opening()
       
       function opening() {
-        $('.sticker.plurk').remove()
-        TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
-        TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});
-        TweenLite.from(".intro", 1, {opacity: 0, x:"-50",ease: Power4.easeOut, delay: .8 ,onComplete: () => {
+        TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {
             $('.transition_bg_open').remove()
         }});
       }
-      
-      
-      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                  event.preventDefault();
-                  $(this).ekkoLightbox();
-              });
-      
-      Chart.defaults.global.animation.duration = 1000;
-      Chart.defaults.global.legend.labels.boxWidth = 15;
-      
-      var ctx = 'myChart'
-      var chart = new Chart(ctx, {
-          // The type of chart we want to create
-          type: 'radar',
-      
-          // The data for our dataset
-          data: {
-              labels: ['筋力', '耐久', '敏捷', '魔力', '幸運', '寶具'],
-              datasets: [{
-                  label: ' ',
-                  borderColor: 'rgb(204, 186, 148, 1)',
-                  backgroundColor: 'rgb(204, 186, 148, .6)',
-                  data: [5, 6, 4, 1, 3, 5]
-              }]
-          },
-      
-          // Configuration options go here
-          options: {
-            scale: {
-                  pointLabels: {
-                    fontFamily: '微軟正黑體',
-                    fontSize: 10,
-                    fontColor: "rgba(204, 186, 148)"
-                  },
-                  ticks: {
-                    display: false,
-                    backdropColor: "rgba(0, 0, 0, 0)",
-                    beginAtZero: true,
-                  },
-                  gridLines: {
-                    display: true,
-                    color: "rgba(204, 186, 148, .5)"
-                  }    
-              },
-              title: {
-                display: false,
-                //- text: $('#name').val(),
-              },
-              legend: {
-                display: false,
-              }
-          }
-      });
     </script>
   </body>
 </html>

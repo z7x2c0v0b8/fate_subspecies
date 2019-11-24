@@ -157,12 +157,11 @@
               <div class="nav-link nav_character">Character</div>
             </li>
             <li class="nav-item text-white"><a class="nav-link nav_story" href="#">Story</a></li>
-            <li class="nav-item text-white"><a class="nav-link nav_info" href="#">Info</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="sticker TRPG">
+    <div class="sticker TRPG d-none d-md-block">
       <p>TRPG</p>
       <p>Fate / Subspecies</p>
       <p>團務網站</p>
@@ -180,6 +179,9 @@
       function jumpStory(){
         $(window).attr('location','./story.html');
       };
+      function jumpAbout(){
+        $(window).attr('location','./about.html');
+      };
       
       
       
@@ -191,6 +193,11 @@
       $(".nav_story").click(function(){
         TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
         setTimeout('jumpStory()', 1000);
+      });
+      
+      $(".nav_about").click(function(){
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpAbout()', 1000);
       });
       
       

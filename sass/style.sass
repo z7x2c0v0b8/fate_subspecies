@@ -6,9 +6,14 @@ body
   height: 100vh
   font-family: 'Noto Sans TC', 'Noto Serif TC', serif
   background-image: url("../Images/background.png")
+  background-color: #111819
   background-size: cover
   background-position: center
   overflow: hidden
+  @media (max-width: 1024px)
+    overflow: auto
+    overflow-x: hidden
+    background-repeat: no-repeat
 
 a:hover, a:visited, a:link, a:active
   color: rgba(255, 255, 255, 1)
@@ -21,11 +26,19 @@ nav.navbar
   top: 0
   left: 0
   padding: 30px 40px
+  width: 100%
   color: #fff
   z-index: 9
+  @media (max-width: 1024px)
+    padding: 20px 25px
+  .navbar-toggler
+    padding-right: 0
+    color: #fff
   .nav-item
     padding: 0 20px
     cursor: pointer
+    @media (max-width: 1024px)
+      padding: 0
   a
     color: #fff
     &:hover
@@ -37,6 +50,8 @@ nav.navbar
   right: 45px
   text-align: right
   color: rgba(255, 255, 255, 1)
+  @media (max-width: 1024px)
+    right: 25px
   p
     margin: 0
 .plurk
@@ -167,6 +182,8 @@ video
   position: relative
   padding: 120px 70px 0
   color: #fff
+  @media (max-width: 768px)
+    padding: 120px 15px 0
   .tatto
     position: absolute
     top: 45px
@@ -179,6 +196,11 @@ video
     opacity: .15
     filter: blur(2px)
     z-index: -9
+    @media (max-width: 768px)
+      width: 250px
+      height: 650px
+      background-repeat: no-repeat
+      transform: translateX(0)
 
   .title_outline
     position: relative
@@ -189,7 +211,10 @@ video
     font-weight: 700
     font-family: serif
     line-height: 1
+    @media (max-width: 768px)
+      font-size: 60px
   .subtitle
+    display: inline-block
     font-size: 20px
   .intro
     margin-top: 50px
@@ -199,41 +224,73 @@ video
     word-wrap: break-word
     color: #fff
     line-height: 2
-    // &:before
-    //   content: ''
-    //   position: absolute
-    //   top: 80%
-    //   left: 0
-    //   width: 100%
-    //   height: 20%
-    //   background: linear-gradient(0deg, rgba(0,19,22,1) 0%, rgba(0,19,22,.5) 35%, rgba(0,19,22,0) 100%);
+    text-align: justify
 
   .chart_outline
     display: inline-block
-    width: 300px
+    width: 250px
+    @media (max-width: 768px)
+      width: 100%
   .value
     display: inline-block
     vertical-align: top
     width: 34%
   .character_main
     position: relative
-    width: 700px
+    width: 800px
     height: 850px
     margin: 0 auto
     background-image: url("../Images/saber_half.png")
+    background-repeat: no-repeat
     background-size: contain
+    @media (max-width: 768px)
+      height: calc(100% - 143px)
+      transform: translateX(-73px)
     .slogan
       color: #fff
       position: absolute
-      top: 10px
-      right: 160px
+      top: 84px
+      right: 223px
       font-size: 30px
       font-family: 'Noto Serif TC'
       font-weight: 700
       writing-mode: vertical-rl
       &:hover
         color: #fff
+  .cha_archer_mobile
+    .character_main.archer
+      @media (max-width: 768px)
+        width: 934px
+        height: calc(100% - 143px)
+        transform: translateX(-73px)
+        background-position: -80vw 0
 
+.row.cha_saber,
+.row.cha_archer
+  position: absolute
+  top: 80px
+  right: 0
+  z-index: -1
+
+.row.cha_archer,
+  .character_main
+    width: 1230px
+    height: 880px
+
+.row.cha_saber,
+  .character_main
+    width: 830px
+    height: 880px
+    
+.cha_archer_mobile,
+.cha_saber_mobile
+  .character_main
+    .slogan
+      @media (max-width: 768px)
+        writing-mode: unset
+        top: calc(100vh - 240px)
+        left: 70px
+        font-size: 26px
 
 .section#character_list
   .card_half
@@ -241,20 +298,22 @@ video
     display: inline-block
     width: 49.1%
     height: 50vh
-    background-color: #343052
+    background-color: #000d10
     background-size: cover
     background-position: top center
     float: left
     text-align: center
-    color: #343052
+    color: #000d10
     font-family: 'Noto Serif TC'
     font-weight: 700
     cursor: pointer
-    transition: all .2s
+    transition: all .3s
+    @media (max-width: 768px)
+      margin-bottom: 50px
     &::before
       content: ''
       position: absolute
-      top: 30%
+      bottom: 0
       left: 0
       width: 100%
       height: 70%
@@ -289,31 +348,25 @@ video
       transform: translateY(-10px)
 
   .archer
-    color: #28385a
-    background-color: #28385a
     background-image: url("../Images/list_archer.png")
     &:hover
       background-color: #1a2846
       background-image: url("../Images/list_archer_hover.png")
       transform: translateY(-10px)
   .archer_master
-    color: #28385a
-    background-color: #28385a
+    background-image: url("../Images/list_master_archer.png")
     &:hover
       background-color: #1a2846
+      background-image: url("../Images/list_master_archer_hover.png")
       transform: translateY(-10px)
 
   .caster
-    color: #7d470e
-    background-color: #e4bc73
     background-image: url("../Images/list_caster.png")
     &:hover
       background-color: #d2a85b
       background-image: url("../Images/list_caster_hover.png")
       transform: translateY(-10px)
   .caster_master
-    color: #7d470e
-    background-color: #e4bc73
     background-image: url("../Images/list_master_caster.png")
     &:hover
       background-color: #d2a85b
@@ -321,15 +374,18 @@ video
       transform: translateY(-10px) 
 
 
+.section#character
+  .intro
+    height: auto
 
-.row.cha_archer
-  position: absolute
-  top: 80px
-  right: 0
-  z-index: -1
-  .character_main
-    width: 1230px
-    height: 880px
+.section#about
+  .about_title
+    border-left: solid 5px #ffffff
+    padding-left: 10px
+    font-weight: bold
+  .intro
+    height: auto
+    margin: 40px 0 50px 0
 
 .section#story
   .story_mask
