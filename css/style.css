@@ -156,8 +156,8 @@ video {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-filter: grayscale(1) brightness(3) contrast(2.5) opacity(0.3);
-  filter: grayscale(1) brightness(3) contrast(2.5) opacity(0.3); }
+  -webkit-filter: grayscale(1) brightness(3) contrast(2.5) opacity(0.2);
+  filter: grayscale(1) brightness(3) contrast(2.5) opacity(0.2); }
 
 .index_timeline {
   position: absolute;
@@ -222,6 +222,14 @@ video {
         -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
         transform: translateX(0); } }
+  .section .tatoo_archer {
+    background-image: url("../Images/tatto_archer.png");
+    width: 649px;
+    height: 633px; }
+  .section .tatoo_caster {
+    background-image: url("../Images/tatto_caster.png");
+    width: 633px;
+    height: 692px; }
   .section .title_outline {
     position: relative;
     width: 100%; }
