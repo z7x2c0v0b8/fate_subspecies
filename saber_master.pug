@@ -7,27 +7,41 @@ block body_content
       .row.cha_saber.d-none.d-lg-block
         .col-lg-7
             .character_main(style="background-image: url('./Images/saber_master_half.png')")
-              //-.slogan
-                | 這一次一定會守護住，
+              .slogan(style="top: 55px;right: 130px;font-size: 28px")
+                | 你是不是誤會了什麼？
                 br
-                | 不會再重蹈覆轍了。
+                |
+                br
+                | 我可從來沒有認為
+                br
+                | 自己是必需接受你的護衛的。
 
       .row.cha_saber_mobile.d-block.d-lg-none
         .col-lg-7
           a.col-lg-7(href="./Images/saber_master_1.png", data-toggle="lightbox", data-max-height="800")
             .character_main(style="background-image: url('./Images/saber_master_half.png')")
-              //-.slogan
-                | 這一次一定會守護住，
+              .slogan(style="top: calc(100vh - 280px)")
+                | 你是不是誤會了什麼？
                 br
-                | 不會再重蹈覆轍了。
+                | 我可從來沒有認為
+                br
+                | 自己是必需接受你的護衛的。
       .row
         .col-lg-5.order-lg-first.order-last
           .title_outline.mt-4
-            .title Master
-            .ml-3.subtitle 才吾郎
+            .title.mr-3 Master
+            .subtitle(style="font-size: 18px") 黑井 才吾郎 / 時鐘塔的魔術師
           .intro
             p
-              | 待補
+              | 日本魔術世家出身。
+              br
+              | 擁有極高的魔術天份。
+              br
+              | 目前隸屬於倫敦時鐘塔的成員，鑽研開發新種魔術。
+              br
+              | 來台灣參加聖杯戰爭，動機僅僅是追求樂趣，附加價值是一點榮耀感。
+              br
+              | 比起獲得聖杯，更享受捉弄自家英靈
           //-.chart_outline.mt-md-3.mt-5
             canvas#myChart(width="250" height="230")
           //-.value.ml-md-4.mt-3
@@ -45,7 +59,7 @@ block body_content
               | 寶具： A
 
             h4.mb-5 任生之刃
-        a.col-lg-7(style="height: 100vh", href="./Images/saber_master_1.png", data-toggle="lightbox", data-max-height="800")
+        a.col-lg-7.d-none.d-md-block(style="height: 100vh", href="./Images/saber_master_1.png", data-toggle="lightbox", data-max-height="800")
 
   .transition_bg_open
 
@@ -59,6 +73,7 @@ block body_script
     opening()
 
     function opening() {
+      $('body').css("background-image","url('../Images/background_saber.png')")
       $('.sticker.plurk').remove()
       TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
       TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});

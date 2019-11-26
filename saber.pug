@@ -23,8 +23,8 @@ block body_content
       .row
         .col-lg-5.order-lg-first.order-last
           .title_outline.mt-4
-            .title Saber
-            .ml-3.subtitle 蕭星 / 土方歲三
+            .title.mr-3 Saber
+            .subtitle 蕭星 / 土方歲三
           .intro
             p
               | 白髮黃瞳的Servant。總是很沈著，也有意外地開朗的時候，一但交鋒則化身為冷靜而殘酷的劊子手。
@@ -61,6 +61,7 @@ block body_script
     opening()
 
     function opening() {
+      $('body').css("background-image","url('../Images/background_saber.png')")
       $('.sticker.plurk').remove()
       TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
       TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});

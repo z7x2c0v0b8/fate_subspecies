@@ -46,6 +46,7 @@ block body_script
     opening()
 
     function opening() {
+      $('.sticker.plurk').remove()
       TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {
           $('.transition_bg_open').remove()
       }});

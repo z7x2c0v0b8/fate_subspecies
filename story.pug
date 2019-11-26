@@ -13,7 +13,7 @@ block body_content
           .intro
             p 位於台灣一角的北港市，是塊擁有潛在靈脈，卻不曾被開發之地。消息曝光後，豐富的靈力資源成為魔術師們爭相前來的主因。為了進一步探究聖杯與根源，魔術師協會將此地列為聖杯戰爭的預備所，號招各地的魔術師與高人，舉辦了北港市首屆的亞種聖杯戰爭⋯⋯。
      
-      .row.story_mask(style="margin-top: 50px")
+      .row.story_mask#simple-bar(style="margin-top: 50px")
         .col-12
           .story_outline
             .caption
@@ -59,11 +59,11 @@ block body_content
               .info
                 a.link(href="./archer.html")
                   .player(style="border-color: #004fa5;background-image: url('https://avatars.plurk.com/10891114-big24683769.jpg')")
-                a.link(href="")
-                  .player(style="border-color: #004fa5;background: #004fa5")
-                a.link(href="")
+                a.link(href="./archer_master.html")
+                  .player(style="border-color: #004fa5;background-image: url('./Images/master_archer_link.png')")
+                a.link(href="./caster.html")
                   .player(style="border-color: #ffbc00;background-image: url('./Images/caster_link.png')")
-                a.link(href="./archer.html")
+                a.link(href="./caster_master.html")
                   .player(style="border-color: #ffbc00;background-image: url('./Images/master_caster_link.png')")
            
             .caption.small
@@ -80,7 +80,7 @@ block body_content
                   .player(style="border-color: #de3e3e;background: #de3e3e")    
                 a.link(href="./saber.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/saber_link.png')")
-                a.link(href="")
+                a.link(href="./saber_master.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/master_saber_link.png')") 
             
             .caption.small
@@ -93,7 +93,7 @@ block body_content
               .info
                 a.link(href="./saber.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/saber_link.png')")
-                a.link(href="")
+                a.link(href="./saber_master.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/master_saber_link.png')")
             .caption.small
               a.story_title(href="https://www.plurk.com/p/nid3b4", target="_blank")
@@ -105,7 +105,7 @@ block body_content
               .info
                 a.link(href="./saber.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/saber_link.png')")
-                a.link(href="")
+                a.link(href="./saber_master.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/master_saber_link.png')")
 
             .caption
@@ -150,7 +150,7 @@ block body_content
               .info
                 a.link(href="./saber.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/saber_link.png')")
-                a.link(href="")
+                a.link(href="./saber_master.html")
                   .player(style="border-color: #554bf1;background-image: url('./Images/master_saber_link.png')")
 
 
@@ -182,4 +182,6 @@ block body_script
       TweenMax.staggerFrom(".line", .8, {css:{height: "0"}, ease: Power4.easeOut}, .2);
     }
 
+    var myElement = document.getElementById('simple-bar');
+    new SimpleBar(myElement, { autoHide: false });
 
