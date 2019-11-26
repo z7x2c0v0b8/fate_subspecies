@@ -118,7 +118,7 @@
       opening()
       
       function opening() {
-        $('body').css("background-image","url('../Images/background_saber.png')")
+        $('body').css("background-image","url('./Images/background_saber.png')")
         $('.sticker.plurk').remove()
         TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
         TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});
