@@ -18,40 +18,42 @@
     <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body>
-    <div class="section" id="character">
-      <div class="tatto tatoo_caster"></div>
-      <div class="container-fluid">
-        <div class="row cha_saber d-none d-lg-block">
-          <div class="col-lg-7">
-            <div class="character_main" style="background-image: url('./Images/caster_half.png');width: 970px"></div>
+    <div class="body_outline">
+      <div class="section" id="character">
+        <div class="tatto tatoo_caster"></div>
+        <div class="container-fluid">
+          <div class="row cha_saber d-none d-lg-block">
+            <div class="col-lg-7">
+              <div class="character_main" style="background-image: url('./Images/caster_half.png');width: 970px"></div>
+            </div>
+          </div>
+          <div class="row cha_saber_mobile d-block d-lg-none">
+            <div class="col-lg-7"><a class="col-lg-7" href="./Images/caster_1.png" data-toggle="lightbox" data-max-height="800">
+                <div class="character_main" style="background-image: url('./Images/caster_half.png')"></div></a></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 order-lg-first order-last">
+              <div class="title_outline mt-4">
+                <div class="title">Caster</div>
+                <div class="ml-3 subtitle">米娜 / ???</div>
+              </div>
+              <div class="intro">
+                <p>待補</p>
+              </div>
+              <div class="chart_outline mt-md-3 mt-5">
+                <canvas id="myChart" width="250" height="230"></canvas>
+              </div>
+              <div class="value ml-md-4 mt-3">
+                <p>
+                   筋力： <br/>耐久： <br/>敏捷： <br/>魔力： <br/>幸運： <br/>寶具： </p>
+                <h4 class="mb-5">???</h4>
+              </div>
+            </div><a class="col-lg-7 d-none d-md-block" href="./Images/caster_1.png" data-toggle="lightbox" data-max-height="800"></a>
           </div>
         </div>
-        <div class="row cha_saber_mobile d-block d-lg-none">
-          <div class="col-lg-7"><a class="col-lg-7" href="./Images/caster_1.png" data-toggle="lightbox" data-max-height="800">
-              <div class="character_main" style="background-image: url('./Images/caster_half.png')"></div></a></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 order-lg-first order-last">
-            <div class="title_outline mt-4">
-              <div class="title">Caster</div>
-              <div class="ml-3 subtitle">米娜 / ???</div>
-            </div>
-            <div class="intro">
-              <p>待補</p>
-            </div>
-            <div class="chart_outline mt-md-3 mt-5">
-              <canvas id="myChart" width="250" height="230"></canvas>
-            </div>
-            <div class="value ml-md-4 mt-3">
-              <p>
-                 筋力： <br/>耐久： <br/>敏捷： <br/>魔力： <br/>幸運： <br/>寶具： </p>
-              <h4 class="mb-5">???</h4>
-            </div>
-          </div><a class="col-lg-7 d-none d-md-block" href="./Images/caster_1.png" data-toggle="lightbox" data-max-height="800"></a>
-        </div>
       </div>
+      <div class="transition_bg_open"></div>
     </div>
-    <div class="transition_bg_open"></div>
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid"><a class="navbar-brand" href="./"><img class="mr-4" style="width: 180px" src="./Images/header_logo.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_item" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="fas fa-bars"></span></button>

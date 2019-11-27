@@ -1,3 +1,4 @@
+
 body
   position: relative
   padding: 0
@@ -11,10 +12,16 @@ body
   background-position: center
   overflow: hidden
   @media (max-width: 1024px)
+    background-repeat: no-repeat
     overflow: auto
     overflow-x: hidden
-    background-repeat: no-repeat
 
+.body_outline
+  @media (max-width: 1024px)
+    wwidth: 100vw
+    overflow-y: visible
+    overflow-x: hidden
+    
 a:hover, a:visited, a:link, a:active
   color: rgba(255, 255, 255, 1)
   &:hover

@@ -18,32 +18,34 @@
     <link rel="stylesheet" href="./css/style.css"/>
   </head>
   <body>
-    <div class="section" id="character">
-      <div class="tatto tatoo_archer"></div>
-      <div class="container-fluid">
-        <div class="row cha_saber d-none d-lg-block">
-          <div class="col-lg-7">
-            <div class="character_main" style="background-image: url('./Images/archer_master_half.png')"></div>
+    <div class="body_outline">
+      <div class="section" id="character">
+        <div class="tatto tatoo_archer"></div>
+        <div class="container-fluid">
+          <div class="row cha_saber d-none d-lg-block">
+            <div class="col-lg-7">
+              <div class="character_main" style="background-image: url('./Images/archer_master_half.png')"></div>
+            </div>
+          </div>
+          <div class="row cha_saber_mobile d-block d-lg-none">
+            <div class="col-lg-7"><a class="col-lg-7" href="./Images/archer_master_1.png" data-toggle="lightbox" data-max-height="800">
+                <div class="character_main" style="background-image: url('./Images/archer_master_half.png')"></div></a></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-5 order-lg-first order-last">
+              <div class="title_outline mt-4">
+                <div class="title">Master</div>
+                <div class="ml-3 subtitle">瑟西</div>
+              </div>
+              <div class="intro">
+                <p>待補</p>
+              </div>
+            </div><a class="col-lg-7 d-none d-md-block" style="height: 100vh" href="./Images/archer_master_1.png" data-toggle="lightbox" data-max-height="800"></a>
           </div>
         </div>
-        <div class="row cha_saber_mobile d-block d-lg-none">
-          <div class="col-lg-7"><a class="col-lg-7" href="./Images/archer_master_1.png" data-toggle="lightbox" data-max-height="800">
-              <div class="character_main" style="background-image: url('./Images/archer_master_half.png')"></div></a></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5 order-lg-first order-last">
-            <div class="title_outline mt-4">
-              <div class="title">Master</div>
-              <div class="ml-3 subtitle">瑟西</div>
-            </div>
-            <div class="intro">
-              <p>待補</p>
-            </div>
-          </div><a class="col-lg-7 d-none d-md-block" style="height: 100vh" href="./Images/archer_master_1.png" data-toggle="lightbox" data-max-height="800"></a>
-        </div>
       </div>
+      <div class="transition_bg_open"></div>
     </div>
-    <div class="transition_bg_open"></div>
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid"><a class="navbar-brand" href="./"><img class="mr-4" style="width: 180px" src="./Images/header_logo.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_item" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="fas fa-bars"></span></button>
@@ -106,6 +108,7 @@
       opening()
       
       function opening() {
+        $('body').css("background-image","url('./Images/background_archer.png')")
         $('.sticker.plurk').remove()
         TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
         TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});

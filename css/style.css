@@ -12,9 +12,15 @@ body {
   overflow: hidden; }
   @media (max-width: 1024px) {
     body {
+      background-repeat: no-repeat;
       overflow: auto;
-      overflow-x: hidden;
-      background-repeat: no-repeat; } }
+      overflow-x: hidden; } }
+
+@media (max-width: 1024px) {
+  .body_outline {
+    wwidth: 100vw;
+    overflow-y: visible;
+    overflow-x: hidden; } }
 
 a:hover, a:visited, a:link, a:active {
   color: white;
