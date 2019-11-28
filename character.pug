@@ -43,10 +43,13 @@ block body_content
 
 block body_script
   script.
-    opening()
+    if ($( window ).width() >= 1024) {
+      opening()
+    }
+
+    $('.sticker.plurk').remove()
 
     function opening() {
-      $('.sticker.plurk').remove()
       TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {
           $('.transition_bg_open').remove()
       }});
@@ -76,30 +79,54 @@ block body_script
 
 
     $(".card_half.saber").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jumpSaber()', 1000)
+      if ($( window ).width() >= 1024) {
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpSaber()', 1000)
+      }
+      else
+        setTimeout('jumpSaber()')
     });
     $(".card_half.saber_master").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jumpSaberMaster()', 1000)
+      if ($( window ).width() >= 1024) {
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpSaberMaster()', 1000)
+      }
+      else
+        setTimeout('jumpSaberMaster()')
     });
 
     $(".card_half.archer").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jumpArcher()', 1000)
+      if ($( window ).width() >= 1024) {
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpArcher()', 1000)
+      }
+      else
+        setTimeout('jumpArcher()')
     });
     $(".card_half.archer_master").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jumpArcherMaster()', 1000)
+      if ($( window ).width() >= 1024) {
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpArcherMaster()', 1000)
+      }
+      else
+        setTimeout('jumpArcherMaster()')
     });
 
     $(".card_half.caster").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jumpCaster()', 1000)
+      if ($( window ).width() >= 1024) {
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpCaster()', 1000)
+      }
+      else
+        setTimeout('jumpCaster()')
     });
     $(".card_half.caster_master").click(function(){
-      TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-      setTimeout('jumpCasterMaster()', 1000)
+      if ($( window ).width() >= 1024) {
+        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+        setTimeout('jumpCasterMaster()', 1000)
+      }
+      else
+        setTimeout('jumpCasterMaster()')
     });
 
 

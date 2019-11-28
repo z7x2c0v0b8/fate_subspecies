@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="language" content="zh_TW"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
-    <link rel="icon" type="/image/x-icon" href="/images/cloudeep.ico"/>
-    <link rel="shortcut icon" href="/images/cloudeep.ico"/>
+    <link rel="icon" type="/image/x-icon" href="/Images/favicon.png"/>
+    <link rel="shortcut icon" href="/Images/favicon.png"/>
     <title>Fate/Subspecies</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="body_outline">
-      <video autoplay="" loop="" muted="">
+      <video class="d-none d-sm-block" autoplay="" loop="" muted="">
         <source src="./Images/index_dust.mp4" type="video/mp4"/>
       </video>
       <div class="black_bg"></div>
@@ -41,6 +41,7 @@
               <div class="nav-link nav_character">Character</div>
             </li>
             <li class="nav-item text-white"><a class="nav-link nav_story" href="#">Story</a></li>
+            <li class="nav-item text-white"><a class="nav-link nav_info" href="#">Info</a></li>
           </ul>
         </div>
       </div>
@@ -61,28 +62,55 @@
       function jump(){
         $(window).attr('location','./character.html');
       };
+      
       function jumpStory(){
         $(window).attr('location','./story.html');
       };
+      
       function jumpAbout(){
         $(window).attr('location','./about.html');
+      };
+      
+      function jumpInfo(){
+        $(window).attr('location','./Info.html');
       };
       
       
       
       $(".nav_character").click(function(){
-        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-        setTimeout('jump()', 1000);
+        if ($( window ).width() >= 1024) {
+          TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+          setTimeout('jump()', 1000);
+        }
+        else
+          setTimeout('jump()');
       });
       
       $(".nav_story").click(function(){
-        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-        setTimeout('jumpStory()', 1000);
+        if ($( window ).width() >= 1024) {
+          TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+          setTimeout('jumpStory()', 1000);
+        }
+        else
+          setTimeout('jumpStory()');
       });
       
       $(".nav_about").click(function(){
-        TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
-        setTimeout('jumpAbout()', 1000);
+        if ($( window ).width() >= 1024) {
+          TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+          setTimeout('jumpAbout()', 1000);
+        }
+        else
+          setTimeout('jumpAbout()');
+      });
+      
+      $(".nav_info").click(function(){
+        if ($( window ).width() >= 1024) {
+          TweenLite.to(".transition_bg", 1, {x:"0", ease: Power4.easeOut});
+          setTimeout('jumpInfo()', 1000);
+        }
+        else
+          setTimeout('jumpInfo()');
       });
       
       

@@ -173,7 +173,9 @@ block body_content
 block body_script
   script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js")
   script.
-    opening()
+    if ($( window ).width() >= 1024) {
+      opening()
+    }
 
     function opening() {
       TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {

@@ -1,0 +1,60 @@
+extends layout
+
+block body_content
+
+
+  .section#about
+    .container-fluid
+      .row
+        .col-12
+          .title_outline.mt-4
+            .title Info
+
+      .row(style="margin-top: 50px")
+        .col-md-4.col-12
+          h4.about_title Cast
+          .intro
+            p 
+              | 團務GM：
+              a(href="https://www.plurk.com/ayangtrpg", target="_blank") 阿羊
+            p
+              | 團務成員：
+              br
+              a(href="https://www.plurk.com/shinki1129", target="_blank") 八音諧 / 阿諧
+              br
+              a(href="https://www.plurk.com/fish0228", target="_blank") 紅
+              br
+              a(href="https://www.plurk.com/e791125", target="_blank") 愛玉
+              br
+              a(href="", target="_blank") 啾哩
+              br
+              a(href="", target="_blank") ㄖㄖ
+              br
+              a(href="", target="_blank") ㄒㄖ
+            p
+              | 網站製作：
+              a(href="https://www.plurk.com/shinki1129", target="_blank") 八音諧 / 阿諧
+        
+        .col-md-4.col-12
+          h4.about_title 背景素材
+          .intro
+            p 
+              | unsplash / PHOTO AC
+
+    .transition_bg_open
+    .transition_bg
+
+
+block body_script
+  script.
+    if ($( window ).width() >= 1024) {
+      opening()
+    }
+    
+    function opening() {
+      TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut,  onComplete: () => {
+          $('.transition_bg_open').remove()
+      }});
+    }
+
+
