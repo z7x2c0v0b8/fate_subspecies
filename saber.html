@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="language" content="zh_TW"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
     <link rel="icon" type="/image/x-icon" href="./Images/favicon.png"/>
     <link rel="shortcut icon" href="./Images/favicon.png"/>
     <title>Fate/Subspecies</title>
@@ -56,7 +56,7 @@
           </div>
         </div>
       </div>
-      <div class="transition_bg_open"></div>
+      <div class="transition_bg_open d-none d-sm-block"></div>
     </div>
     <nav class="navbar navbar-expand-md">
       <div class="container-fluid"><a class="navbar-brand" href="./"><img class="mr-4" style="width: 180px" src="./Images/header_logo.png"/></a>
@@ -86,6 +86,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
     <script>
+      $(document).bind("touchmove",function(event){
+        event.preventDefault();
+      });
+      
       function jump(){
         $(window).attr('location','./character.html');
       };
@@ -156,7 +160,7 @@
         TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
         TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});
         TweenLite.from(".intro", 1, {opacity: 0, x:"-50",ease: Power4.easeOut, delay: .8 ,onComplete: () => {
-            $('.transition_bg_open').remove()
+          $('.transition_bg_open').remove()
         }});
       }
       

@@ -3,8 +3,7 @@ html(lang="zh-tw")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="language", content="zh_TW")
-    meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1")
-
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1")
     link(rel="icon", type="/image/x-icon", href="./Images/favicon.png")
     link(rel="shortcut icon", href="./Images/favicon.png")
 
@@ -52,6 +51,10 @@ html(lang="zh-tw")
       script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js")
       script(src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js")
       script.
+        $(document).bind("touchmove",function(event){
+          event.preventDefault();
+        });
+
         function jump(){
           $(window).attr('location','./character.html');
         };

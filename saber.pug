@@ -15,11 +15,11 @@ block body_content
       .row.cha_saber_mobile.d-block.d-lg-none
         .col-lg-7
           a.col-lg-7(href="./Images/saber_1.png", data-toggle="lightbox", data-max-height="800")
-            .character_main(style="background-image: url('./Images/saber_half.png')")
-              .slogan
-                | 這一次一定會守護住，
-                br
-                | 不會再重蹈覆轍了。
+              .character_main(style="background-image: url('./Images/saber_half.png')")
+                .slogan
+                  | 這一次一定會守護住，
+                  br
+                  | 不會再重蹈覆轍了。
       .row
         .col-lg-5.order-lg-first.order-last
           .title_outline.mt-4
@@ -49,7 +49,7 @@ block body_content
             h4.mb-5 任生之刃
         a.col-lg-7(href="./Images/saber_1.png", data-toggle="lightbox", data-max-height="800")
 
-  .transition_bg_open
+  .transition_bg_open.d-none.d-sm-block
 
 
 
@@ -69,7 +69,7 @@ block body_script
       TweenLite.from(".transition_bg_open", 1, {x:"0", ease: Power4.easeOut});
       TweenLite.from(".title_outline", 1, {opacity: 0, x:"-50", ease: Power4.easeOut, delay: .5});
       TweenLite.from(".intro", 1, {opacity: 0, x:"-50",ease: Power4.easeOut, delay: .8 ,onComplete: () => {
-          $('.transition_bg_open').remove()
+        $('.transition_bg_open').remove()
       }});
     }
 

@@ -13,12 +13,13 @@ body
   overflow: hidden
   @media (max-width: 1024px)
     background-repeat: no-repeat
+    max-width: 100%
     overflow: auto
-    overflow-x: hidden
+    overflow-x: hidden !important
 
 .body_outline
   @media (max-width: 1024px)
-    wwidth: 100vw
+    width: 100vw
     overflow-y: visible
     overflow-x: hidden
     
@@ -249,6 +250,10 @@ video
     display: inline-block
     vertical-align: top
     width: 34%
+  .outline
+    width: 100vw
+    height: auto
+    overflow: hidden
   .character_main
     position: relative
     width: 800px

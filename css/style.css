@@ -13,12 +13,13 @@ body {
   @media (max-width: 1024px) {
     body {
       background-repeat: no-repeat;
+      max-width: 100%;
       overflow: auto;
-      overflow-x: hidden; } }
+      overflow-x: hidden !important; } }
 
 @media (max-width: 1024px) {
   .body_outline {
-    wwidth: 100vw;
+    width: 100vw;
     overflow-y: visible;
     overflow-x: hidden; } }
 
@@ -270,6 +271,10 @@ video {
     display: inline-block;
     vertical-align: top;
     width: 34%; }
+  .section .outline {
+    width: 100vw;
+    height: auto;
+    overflow: hidden; }
   .section .character_main {
     position: relative;
     width: 800px;
